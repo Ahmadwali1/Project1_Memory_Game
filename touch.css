@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "ginga";
+  src: url(./fonts/Ginga.ttf);
+}
+@font-face {
+  font-family: "mexcellent";
+  src: url(./fonts/mexcellent\ 3d.otf);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  min-height: 100vh;
+}
+body{
+  margin: 0;
+  background-image: url('./pictures/images.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: radial-gradient(#9D5900,#3D2200);
+}
+.page-title{
+  color: #ff6d00;
+  font-family: ginga, serif;
+  font-weight: normal;
+  text-align: center;
+  font-size: 6em;
+}
+
+.game_info_container{
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+
+}
+.game_info {
+  color: #ffbb89;
+  font-size: 4em;
+  font-family: mexcellent;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  margin: 50px;
+  justify-content: center;
+  perspective: 500px;
+}
+.card {
+  background-color: rgba(225,225,225, 0);
+  height: 175px;
+  width: 125px;
+  position: relative;
+  
+  
+}
+.card.card.visible .back-card{
+  transform: rotateY(-180deg);
+  transition: transform 500ms ease-in-out;
+}
+.card.visible .card-front{
+  transform: rotateY(0);
+  transition: transform 500ms ease-in-out;
+}
+
+.back-card {
+  position: absolute;
+  height: 175px;
+  width: 125px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.card-value {
+  height: 150px;
+  width: 110px;
+  
+}
+.over-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #ff6d00;
+  font-family: ginga, serif;
+
+}
+.over-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: over-grow 500ms forwards;
+}
+@keyframes over-grow {
+  from {
+  background-color: rgba(0,0,0,0);
+  font-size: 0;
+  }
+  to {
+    background-color: rgba(0,0,0, .8);
+    font-size: 10em;
+  }
+}
+.over-text-small {
+  font-size: .3em;
+}
+@media (max-width: 600px) {
+  .game-container {
+    grid-template-columns: repeat(2, auto);
+  }
+  .game_info_container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
