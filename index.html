@@ -1,192 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script  defer src="./touch.js" ></script>
-  <link rel="stylesheet" href="./touch.css">
-</head>
-<body>
-  <h1 class="page-title">Memory Game</h1>
-  <div class="over-text visible">Click to start</div>
-  <div id="game-over-text" class="over-text ">
-    Game Over
-    <span class="over-text-small">Click to Restart</span>
-  </div>
-  <div id="victory-text" class="over-text ">
-    VICTORY
-    <span class="over-text-small">Click to Restart</span>
-  </div>
-  <div class="game-container">
-    <div class="game_info_container">
-      <div class="game_info">
-        Time <span id="time_remaining">50</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./touch.js"></script>
+    <link rel="stylesheet" href="./touch.css" />
+  </head>
+  <body>
+    <h1 class="page-title">Memory Game</h1>
+    <div class="name-input">
+      <input type="text" id="player-name" placeholder="Enter Your Name">
+      <button id="start-button">start</button>
+    </div>
+
+    <div id="side-menu">
+      <h3>Time Ranking</h3>
+      <ul id="ranking-list">
+
+      </ul>
+    </div>
+   
+    <div class="over-text">Click to start</div>
+    <div id="game-over-text" class="over-text">
+      Game Over
+      <span class="over-text-small">Click to Restart</span>
+    </div>
+    <div id="victory-text" class="over-text">
+      VICTORY
+      <span class="over-text-small">Click to Restart</span>
+    </div>
+    <div class="game-container">
+      <div class="game_info_container">
+        <div class="game_info">Time <span id="time_remaining">50</span></div>
+        <div class="game_info">Flips <span id="flips">0</span></div>
       </div>
-      <div class="game_info">
-        Flips <span id="flips">0</span>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/books.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/books.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/calculator.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/calculator.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/3d-cube.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/3d-cube.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/clock.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/clock.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/diploma.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/diploma.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/music-note.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/music-note.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/microscope.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/microscope.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/university.png" />
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-back">
+          <img
+            class="back-card"
+            src="./pictures/istockphoto-476618574-612x612.png"
+          />
+        </div>
+        <div class="card-front">
+          <img class="card-value" src="./pictures/university.png" />
+        </div>
       </div>
     </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/books.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/books.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/calculator.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/calculator.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/3d-cube.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/3d-cube.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/clock.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/clock.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/diploma.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/diploma.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/music-note.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/music-note.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/microscope.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/microscope.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/university.png">
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-back">
-        <img class="back-card"
-        src="./pictures/istockphoto-476618574-612x612.png">
-      </div>
-      <div class="card-front">
-        <img class="card-value"
-        src="./pictures/university.png">
-      </div>
-    </div>
-  </div>
-</body>
+  </body>
 </html>

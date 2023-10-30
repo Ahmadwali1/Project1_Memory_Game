@@ -123,3 +123,49 @@ body{
   }
 }
 
+
+
+
+
+.name-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+#player-name {
+  font-size: 1.5em;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#start-button {
+  font-size: 1.2em;
+  background-color: #ff6d00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#start-button:hover {
+  background-color: #ff8000;
+}
+
+#side-menu {
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+#ranking-list {
+  list-style: none;
+  padding: 0;
+}
+
+#ranking-list li {
+  margin: 5px 0;
+}
